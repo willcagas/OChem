@@ -38,7 +38,6 @@ button:hover {
     margin-top: 10px;
 }   
 
-
 #primarySettings{
     display: flex;
     gap: 100px; 
@@ -57,6 +56,12 @@ button:hover {
 #generateButton {
     margin-top: 35px;
     margin-bottom: 35px;
+}
+
+#credits {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
 }
 
 
