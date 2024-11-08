@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Compound Nomenclature</title>
+
+    <!-- Local stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/kekule/dist/themes/default/kekule.css" />
+    <script src="https://cdn.jsdelivr.net/npm/kekule/dist/kekule.min.js"></script>
+
+    <script src="https://unpkg.com/openchemlib@latest/dist/openchemlib-full.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>SCH4U Organic Compound Nomenclature ⌬</h1>
+
+        <div id="settings">
+            <div id="primarySettings">
+                <div>
+                    <h3>Mode</h3>
+                    <div id="mode">
+                        <div>
+                            <input type="checkbox" id="namingCheckbox" value="naming">
+                            <label for="namingCheckbox">Naming</label><br>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="drawingCheckbox" value="drawing">
+                            <label for="drawingCheckbox">Drawing</label><br>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>Diagram Type</h3>
+                    <div id="diagramType">
+                        <div>
+                            <input type="checkbox" id="condensedCheckbox" value="condensed">
+                            <label for="condensedCheckbox">Condensed</label><br>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" id="lineCheckbox" value="line">
+                            <label for="lineCheckbox">Line</label><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 id="compoundHeader">Compounds</h3>
+            <div id="compoundTypes">
+                <div id="hydrocarbons">
+                    <h4><input type="checkbox" id="hydrocarbonsToggle"> Hydrocarbons</h4>
+                    <input type="checkbox" id="alkanesCheckbox" value="alkane">
+                    <label for="alkanesCheckbox">Alkanes</label><br>
+            
+                    <input type="checkbox" id="alkenesCheckbox" value="alkene">
+                    <label for="alkenesCheckbox">Alkenes</label><br>
+            
+                    <input type="checkbox" id="alkynesCheckbox" value="alkyne">
+                    <label for="alkynesCheckbox">Alkynes</label><br>
+            
+                    <input type="checkbox" id="cyclicCheckbox" value="cyclic">
+                    <label for="cyclicCheckbox">Cyclic</label><br>
+            
+                    <input type="checkbox" id="aromaticCheckbox" value="aromatic">
+                    <label for="aromaticCheckbox">Aromatic</label><br>
+                </div>
+            
+                <div id="oxygen-containing">
+                    <h4><input type="checkbox" id="oxygenToggle"> Oxygen-Containing</h4>
+                    <input type="checkbox" id="alcoholsCheckbox" value="alcohol">
+                    <label for="alcoholsCheckbox">Alcohols</label><br>
+            
+                    <input type="checkbox" id="ethersCheckbox" value="ether">
+                    <label for="ethersCheckbox">Ethers</label><br>
+            
+                    <input type="checkbox" id="aldehydesCheckbox" value="aldehyde">
+                    <label for="aldehydesCheckbox">Aldehydes</label><br>
+            
+                    <input type="checkbox" id="ketonesCheckbox" value="ketone">
+                    <label for="ketonesCheckbox">Ketones</label><br>
+            
+                    <input type="checkbox" id="carboxylicCheckbox" value="carboxylic">
+                    <label for="carboxylicCheckbox">Carboxylic Acids</label><br>
+            
+                    <input type="checkbox" id="estersCheckbox" value="ester">
+                    <label for="estersCheckbox">Esters</label><br>
+                </div>
+            
+                <div id="nitrogen-containing">
+                    <h4><input type="checkbox" id="nitrogenToggle"> Nitrogen-Containing</h4>
+                    <input type="checkbox" id="aminesCheckbox" value="amines">
+                    <label for="aminesCheckbox">Amines</label><br>
+            
+                    <input type="checkbox" id="amidesCheckbox" value="amides">
+                    <label for="amidesCheckbox">Amides</label><br>
+                </div>
+            </div>
+        </div>
+        
+        <button id="generateButton" onclick="generateRandomCompounds()">Generate Questions</button>
+
+        <div id="compoundList"></div>
+
+        <div>
+            <h5>Made with ❤ by Will</h5>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

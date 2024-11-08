@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+input[type="text"] {
+    width: calc(100% - 50px);
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#compoundList div {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}   
+
+
+#primarySettings{
+    display: flex;
+    gap: 100px; 
+}
+
+#compoundTypes{
+    display: flex;
+    gap: 25px; 
+}
+
+#compoundHeader {
+    margin-Top: 2rem;
+    margin-bottom: 0; 
+}
+
+#generateButton {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+
