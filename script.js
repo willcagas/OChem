@@ -13,7 +13,7 @@ const smilesMap = {
 
     "CC(CC)(CC)C": { type: "alkane", names: ["3,3-dimethylpentane"] },
     "CC(C)C(CCC)C": { type: "alkane", names: ["2,3-dimethylhexane"] },
-    "BrC(C)C(C)Cl": { type: "alkane", names: ["2-bromo-3-chlorobutane"] },
+    "BrC(C)C(C)Cl": { type: "alkane", names: ["2-bromo-3-chlorobutane", "3-bromo-2-chlorobutane"] },
     "C(C)C(CC)(CC)CC": { type: "alkane", names: ["3,3-diethylpentane"] },
     "C(CC)C(CCC(C)(C)C)CCC": { type: "alkane", names: ["5-propyl-2,2-dimethyloctane"] },
 
@@ -266,7 +266,7 @@ function drawCompound(i, smiles, names, compoundListDiv) {
     // Container for the Composer editor
     const composerContainer = document.createElement('div');
     composerContainer.id = `composer-${i}`;
-    composerContainer.style.width = '600px';
+    composerContainer.style.width = '500px';
     composerContainer.style.height = '400px';
     
     const nameDiv = document.createElement('div');
@@ -278,7 +278,7 @@ function drawCompound(i, smiles, names, compoundListDiv) {
     // Initialize Composer within the compound container
     var composer = new Kekule.Editor.Composer(composerContainer);
     // Set dimensions
-    composer.setDimension('600px', '400px');
+    composer.setDimension('500px', '400px');
     // Set minimal toolbar configuration for a blank editor
     composer.setCommonToolButtons(['newDoc', 'undo', 'redo', 'saveData']);
     composer.setChemToolButtons(['manipulate', 'erase', 'bond', 'ring', 'atomAndFormula']);
