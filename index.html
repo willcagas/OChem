@@ -13,6 +13,7 @@
 
     <script src="https://unpkg.com/openchemlib@latest/dist/openchemlib-full.js"></script>
 
+    <script src="assets/compounds.js"></script>
 </head>
 <body>
     <div class="container">
@@ -21,7 +22,7 @@
         <div id="settings">
             <div id="primarySettings">
                 <div>
-                    <h3>Mode</h3>
+                    <h3>1. Mode</h3>
                     <div id="mode">
                         <div>
                             <input type="checkbox" id="namingCheckbox" value="naming">
@@ -36,7 +37,7 @@
                 </div>
                 
                 <div>
-                    <h3>Diagram Type</h3>
+                    <h3>2. Diagram Type</h3>
                     <div id="diagramType">
                         <div>
                             <input type="checkbox" id="condensedCheckbox" value="condensed">
@@ -51,64 +52,67 @@
                 </div>
             </div>
             
-            <h3 id="compoundHeader">Compounds</h3>
+            <h3 id="compoundHeader">3. Compounds</h3>
             <div id="compoundTypes">
                 <div id="hydrocarbons">
                     <h4><input type="checkbox" id="hydrocarbonsToggle"> Hydrocarbons</h4>
-                    <input type="checkbox" id="alkanesCheckbox" value="alkane">
+                    <input type="checkbox" id="alkanesCheckbox" onclick="toggleCheckboxes()" value="alkane">
                     <label for="alkanesCheckbox">Alkanes</label><br>
             
-                    <input type="checkbox" id="alkenesCheckbox" value="alkene">
+                    <input type="checkbox" id="alkenesCheckbox" onclick="toggleCheckboxes()" value="alkene">
                     <label for="alkenesCheckbox">Alkenes</label><br>
             
-                    <input type="checkbox" id="alkynesCheckbox" value="alkyne">
+                    <input type="checkbox" id="alkynesCheckbox" onclick="toggleCheckboxes()" value="alkyne">
                     <label for="alkynesCheckbox">Alkynes</label><br>
             
-                    <input type="checkbox" id="cyclicCheckbox" value="cyclic">
+                    <input type="checkbox" id="cyclicCheckbox" onclick="toggleCheckboxes()" value="cyclic">
                     <label for="cyclicCheckbox">Cyclic</label><br>
             
-                    <input type="checkbox" id="aromaticCheckbox" value="aromatic">
+                    <input type="checkbox" id="aromaticCheckbox" onclick="toggleCheckboxes()" value="aromatic">
                     <label for="aromaticCheckbox">Aromatic</label><br>
                 </div>
             
                 <div id="oxygen-containing">
                     <h4><input type="checkbox" id="oxygenToggle"> Oxygen-Containing</h4>
-                    <input type="checkbox" id="alcoholsCheckbox" value="alcohol">
+                    <input type="checkbox" id="alcoholsCheckbox" onclick="toggleCheckboxes()" value="alcohol">
                     <label for="alcoholsCheckbox">Alcohols</label><br>
             
-                    <input type="checkbox" id="ethersCheckbox" value="ether">
+                    <input type="checkbox" id="ethersCheckbox" onclick="toggleCheckboxes()" value="ether">
                     <label for="ethersCheckbox">Ethers</label><br>
             
-                    <input type="checkbox" id="aldehydesCheckbox" value="aldehyde">
+                    <input type="checkbox" id="aldehydesCheckbox" onclick="toggleCheckboxes()" value="aldehyde">
                     <label for="aldehydesCheckbox">Aldehydes</label><br>
             
-                    <input type="checkbox" id="ketonesCheckbox" value="ketone">
+                    <input type="checkbox" id="ketonesCheckbox" onclick="toggleCheckboxes()" value="ketone">
                     <label for="ketonesCheckbox">Ketones</label><br>
             
-                    <input type="checkbox" id="carboxylicCheckbox" value="carboxylic">
+                    <input type="checkbox" id="carboxylicCheckbox" onclick="toggleCheckboxes()" value="carboxylic">
                     <label for="carboxylicCheckbox">Carboxylic Acids</label><br>
             
-                    <input type="checkbox" id="estersCheckbox" value="ester">
+                    <input type="checkbox" id="estersCheckbox" onclick="toggleCheckboxes()" value="ester">
                     <label for="estersCheckbox">Esters</label><br>
                 </div>
             
                 <div id="nitrogen-containing">
                     <h4><input type="checkbox" id="nitrogenToggle"> Nitrogen-Containing</h4>
-                    <input type="checkbox" id="aminesCheckbox" value="amines">
+                    <input type="checkbox" id="aminesCheckbox" onclick="toggleCheckboxes()" value="amine">
                     <label for="aminesCheckbox">Amines</label><br>
             
-                    <input type="checkbox" id="amidesCheckbox" value="amides">
+                    <input type="checkbox" id="amidesCheckbox" onclick="toggleCheckboxes()" value="amide">
                     <label for="amidesCheckbox">Amides</label><br>
                 </div>
             </div>
         </div>
         
-        <button id="generateButton" onclick="generateRandomCompounds()">Generate Questions</button>
+        <div id="generateDiv">
+            <button id="generateButton" onclick="generateRandomCompounds()">Generate Questions</button>
+            <h3 id="numQuestions">/</h3>
+        </div>
 
         <div id="compoundList"></div>
 
         <div id="credits">
-            <h5>Made with ❤ by Will</h5>
+            <h5>Made with ❤ by William Cagas</h5>
 
             <span class="link-block">
                 <a href="https://github.com/willcagas/ochem" target="_blank" style="display: inline-block; padding: 5px 5px; background-color: #000; color: #fff; border-radius: 5px; text-decoration: none; font-family: Arial, sans-serif;">
@@ -118,9 +122,8 @@
                 </a>
             </span>
         </div>
-    </div>
 
-    <script src="script.js"></script>
-    
+        <script src="script.js"></script>
+    </div> 
 </body>
 </html>
