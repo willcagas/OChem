@@ -271,7 +271,7 @@ function generateRandomCompounds() {
     const drawing = selectedCategories.includes("drawing");
 
     if (!(naming || drawing) || (naming && !selectedCategories.includes("line") && !selectedCategories.includes("condensed"))) {
-        return;
+        alert("Please choose at least one option for each category: 1. Mode, 2. Diagram, 3. Compounds");
     }    
     
     // 10 questions  
