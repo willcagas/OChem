@@ -23,7 +23,7 @@ const compounds = {
     "CC(CC(CC)O)O": { type: "alcohol", names: ["hexane-2,4-diol"] },
     "C(CC)C(CO)CCCCC": { type: "alcohol", names: ["2-propylheptan-1-ol"] },
     "C(C)OC1C=CCC1": { type: "ether", names: ["3-ethoxycyclopentene"] },
-    "C(CCC)OC1=CC(=CC=C1)CC": { type: "ether", names: ["1-butoxy3-ethylbenzene"] },
+    "C(CCC)OC1=CC(=CC=C1)CC": { type: "ether", names: ["1-butoxy-3-ethylbenzene"] },
     "CC(CC(C(CCC)O)O)O": { type: "alcohol", names: ["octane-2,4,5-triol"] },
     "C(CCCC)OC1=C(C=CC=C1)Br": { type: "ether", names: ["1-pentoxy-2-bromobenzene"] },
     "[N+](=O)([O-])C1=CC=C(C=C1)O": { type: "ether", names: ["4-nitrobenzenol"] },
