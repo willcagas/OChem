@@ -270,13 +270,14 @@ function generateRandomCompounds() {
     const naming = selectedCategories.includes("naming");
     const drawing = selectedCategories.includes("drawing");
 
-    if (!(naming || drawing) || (naming && !selectedCategories.includes("line") && !selectedCategories.includes("condensed"))) {
-        alert("Please choose at least one option for each category: 1. Mode, 2. Diagram, 3. Compounds");
-    }    
-    
-    // 10 questions  
     const smilesKeys = Object.keys(filteredCompounds);
     const numCompounds = smilesKeys.length;
+
+    if (!(naming || drawing) || !(selectedCategories.includes("line") || selectedCategories.includes("condensed")) || numCompounds == 0) {
+        alert("Please choose at least one option for each category: 1. Mode, 2. Diagram, 3. Compounds");
+
+        return
+    }    
 
     for (let i = 0; i < numCompounds && smilesKeys.length > 0; i++) {
         console.log("once")
