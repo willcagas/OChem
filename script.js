@@ -387,5 +387,3 @@ function checkAnswer(index) {
         }
     }
 }
-
-generateRandomCompounds();
